@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import PageHero from "@/components/PageHero";
@@ -42,7 +42,7 @@ export default function SammelstationenPage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }} className="two-col-stack">
             <div className="reveal-left">
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Verpackungsautomatisierung</p>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Verpackungsautomatisierung</p>
               <h2 style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", marginBottom: 20, lineHeight: 1.2 }}>
                 Sammelstationen für jede Anforderung
               </h2>
@@ -62,8 +62,8 @@ export default function SammelstationenPage() {
                     background: "#f5f5f7", borderRadius: 12, padding: "16px 18px",
                     border: "1px solid rgba(0,0,0,0.05)",
                   }}>
-                    <div style={{ flexShrink: 0, width: 24, height: 24, borderRadius: 6, background: "rgba(26,138,60,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1 }}>
-                      <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#1a8a3c" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <div style={{ flexShrink: 0, width: 24, height: 24, borderRadius: 6, background: "rgba(28,110,52,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1 }}>
+                      <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                     <p style={{ fontSize: 14, color: "#424245", lineHeight: 1.5 }} dangerouslySetInnerHTML={{ __html: v.replace(/(integrierter?|Blockbilden|Tisch|Tray|Foliensack|Transportband)/g, '<strong>$1</strong>') }} />
                   </div>
@@ -77,7 +77,7 @@ export default function SammelstationenPage() {
       {/* Produkt-Galerie */}
       <section style={{ background: "#f5f5f7", padding: "72px 0" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
-          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Produktübersicht</p>
+          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Produktübersicht</p>
           <h2 className="reveal delay-100" style={{ fontSize: "clamp(1.2rem,1.8vw,1.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1d1d1f", marginBottom: 28 }}>
             Unsere Sammelstationen
           </h2>

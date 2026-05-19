@@ -43,7 +43,7 @@ export default function Footer() {
               ].map((s) => (
                 <a key={s.label} href={s.href} aria-label={s.label}
                   style={{ width: 36, height: 36, borderRadius: 10, border: "1px solid rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.4)", transition: "all 0.2s" }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#1a8a3c"; (e.currentTarget as HTMLElement).style.color = "#4ade80"; }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#1c6e34"; (e.currentTarget as HTMLElement).style.color = "#5fb27a"; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)"; (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.4)"; }}
                 >
                   <svg width="14" height="14" fill={s.fill ? "currentColor" : "none"} stroke={s.fill ? "none" : "currentColor"} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -91,28 +91,28 @@ export default function Footer() {
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 18 }}>Kontakt</p>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 14 }}>
               <li style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
-                <svg style={{ flexShrink: 0, marginTop: 1 }} width="15" height="15" fill="none" stroke="#1a8a3c" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                <svg style={{ flexShrink: 0, marginTop: 1 }} width="15" height="15" fill="none" stroke="#1c6e34" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                   <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
                 <span style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>Industriestrasse 1A<br/>74933 Neidenstein</span>
               </li>
               <li style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <svg style={{ flexShrink: 0 }} width="15" height="15" fill="none" stroke="#1a8a3c" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                <svg style={{ flexShrink: 0 }} width="15" height="15" fill="none" stroke="#1c6e34" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                   <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
                 <a href="mailto:info@ernstmaschinen.de"
                   style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", textDecoration: "none", transition: "color 0.18s" }}
-                  onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = "#4ade80"}
+                  onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = "#5fb27a"}
                   onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.55)"}
                 >info@ernstmaschinen.de</a>
               </li>
               <li style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <svg style={{ flexShrink: 0 }} width="15" height="15" fill="none" stroke="#1a8a3c" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                <svg style={{ flexShrink: 0 }} width="15" height="15" fill="none" stroke="#1c6e34" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                   <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                 </svg>
                 <a href="tel:+4972639199-0"
                   style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", textDecoration: "none", transition: "color 0.18s" }}
-                  onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = "#4ade80"}
+                  onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = "#5fb27a"}
                   onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.55)"}
                 >+49 7263 / 9199-0</a>
               </li>
@@ -120,9 +120,9 @@ export default function Footer() {
 
             {/* CTA */}
             <Link href="/kontakt"
-              style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 24, fontSize: 13, fontWeight: 600, color: "#fff", background: "#1a8a3c", borderRadius: 999, padding: "9px 18px", textDecoration: "none", transition: "background 0.2s" }}
-              onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.background = "#146830"}
-              onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.background = "#1a8a3c"}
+              style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 24, fontSize: 13, fontWeight: 600, color: "#fff", background: "#1c6e34", borderRadius: 999, padding: "9px 18px", textDecoration: "none", transition: "background 0.2s" }}
+              onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.background = "#155228"}
+              onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.background = "#1c6e34"}
             >
               Kontakt aufnehmen
               <svg width="12" height="12" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>

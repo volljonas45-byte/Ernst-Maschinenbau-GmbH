@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import PageHero from "@/components/PageHero";
@@ -47,7 +47,7 @@ export default function LohnarbeitPage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "5fr 7fr", gap: 64, alignItems: "start" }} className="two-col-stack">
             <div className="reveal-left">
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Allgemeine Lohnarbeit</p>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Allgemeine Lohnarbeit</p>
               <h2 style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", marginBottom: 20, lineHeight: 1.2 }}>
                 Ihr Fertigungsauftrag in erfahrenen Händen
               </h2>
@@ -58,7 +58,7 @@ export default function LohnarbeitPage() {
             <div className="reveal-right" style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {allgemein.map((l, i) => (
                 <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "12px 0", borderBottom: "1px solid rgba(0,0,0,0.05)" }}>
-                  <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1a8a3c" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   <p style={{ fontSize: 14.5, color: "#424245", lineHeight: 1.5 }}>{l}</p>
                 </div>
               ))}
@@ -68,11 +68,11 @@ export default function LohnarbeitPage() {
       </section>
 
       {/* Recyclingbetriebe – dunkel */}
-      <section style={{ background: "#0c1a30", padding: "80px 0" }}>
+      <section className="section-fade-from-white" style={{ background: "#0c1a30", padding: "80px 0" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "5fr 7fr", gap: 64, alignItems: "start" }} className="two-col-stack">
             <div className="reveal-left">
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#22c55e", marginBottom: 12 }}>Spezialisierung</p>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#2a8d4a", marginBottom: 12 }}>Spezialisierung</p>
               <h2 style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#fff", marginBottom: 20, lineHeight: 1.2 }}>
                 Für Recyclingbetriebe
               </h2>
@@ -83,7 +83,7 @@ export default function LohnarbeitPage() {
             <div className="reveal-right" style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {recycling.map((l, i) => (
                 <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "14px 18px", background: "rgba(255,255,255,0.05)", borderRadius: 12, border: "1px solid rgba(255,255,255,0.06)" }}>
-                  <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#22c55e" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#2a8d4a" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   <p style={{ fontSize: 14.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>{l}</p>
                 </div>
               ))}

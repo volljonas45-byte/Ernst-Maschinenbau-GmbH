@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const ASSET_PREFIX = process.env.NODE_ENV === "production" ? "/Ernst-Maschinenbau-GmbH" : "";
 
@@ -53,6 +53,13 @@ export default function PageHero({
         background: "linear-gradient(105deg, rgba(12,26,48,0.92) 0%, rgba(12,26,48,0.70) 50%, rgba(12,26,48,0.40) 100%)",
       }} />
 
+      {/* Soft bottom fade for smooth transition to next section */}
+      <div style={{
+        position: "absolute", left: 0, right: 0, bottom: 0, height: 120,
+        background: "linear-gradient(to bottom, transparent 0%, rgba(12,26,48,0.55) 100%)",
+        pointerEvents: "none", zIndex: 1,
+      }} />
+
       {/* Content */}
       <div style={{
         position: "relative", zIndex: 2,
@@ -87,12 +94,12 @@ export default function PageHero({
         {/* Badge */}
         <p style={{
           fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase",
-          color: "#22c55e", marginBottom: 12,
+          color: "#2a8d4a", marginBottom: 12,
           display: "flex", alignItems: "center", gap: 8,
         }}>
           <span style={{
             display: "inline-block", width: 6, height: 6, borderRadius: "50%",
-            background: "#22c55e", boxShadow: "0 0 0 3px rgba(34,197,94,0.25)",
+            background: "#2a8d4a", boxShadow: "0 0 0 3px rgba(42,141,74,0.25)",
           }} />
           {badge}
         </p>

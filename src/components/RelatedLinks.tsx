@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 interface RelatedItem {
   title: string;
@@ -50,12 +50,12 @@ export default function RelatedLinks({ items }: RelatedLinksProps) {
       <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
         <p style={{
           fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase",
-          color: "#22c55e", marginBottom: 12,
+          color: "#2a8d4a", marginBottom: 12,
           display: "flex", alignItems: "center", gap: 8,
         }}>
           <span style={{
             display: "inline-block", width: 6, height: 6, borderRadius: "50%",
-            background: "#22c55e", boxShadow: "0 0 0 3px rgba(34,197,94,0.25)",
+            background: "#2a8d4a", boxShadow: "0 0 0 3px rgba(42,141,74,0.25)",
           }} />
           Weiterführende Informationen
         </p>
@@ -89,8 +89,8 @@ export default function RelatedLinks({ items }: RelatedLinksProps) {
               }}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.background = "rgba(26,138,60,0.12)";
-                el.style.borderColor = "rgba(26,138,60,0.4)";
+                el.style.background = "rgba(28,110,52,0.12)";
+                el.style.borderColor = "rgba(28,110,52,0.4)";
                 el.style.transform = "translateY(-4px)";
               }}
               onMouseLeave={e => {
@@ -102,9 +102,9 @@ export default function RelatedLinks({ items }: RelatedLinksProps) {
             >
               <div style={{
                 width: 44, height: 44, borderRadius: 12,
-                background: "rgba(26,138,60,0.15)",
+                background: "rgba(28,110,52,0.15)",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                color: "#1a8a3c", marginBottom: 18,
+                color: "#1c6e34", marginBottom: 18,
               }}>
                 {icons[item.icon]}
               </div>
@@ -122,7 +122,7 @@ export default function RelatedLinks({ items }: RelatedLinksProps) {
               </p>
               <div style={{
                 display: "flex", alignItems: "center", gap: 6,
-                fontSize: 13, fontWeight: 600, color: "#1a8a3c",
+                fontSize: 13, fontWeight: 600, color: "#1c6e34",
               }}>
                 Mehr erfahren
                 <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">

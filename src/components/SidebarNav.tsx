@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -34,7 +34,7 @@ export default function SidebarNav({ title, items }: SidebarNavProps) {
               <Link
                 href={item.href}
                 className={`flex items-center gap-2 py-1.5 text-sm transition-colors ${
-                  isActive ? "text-[#1a8a3c] font-semibold" : "text-gray-500 hover:text-[#1a8a3c]"
+                  isActive ? "text-[#1c6e34] font-semibold" : "text-gray-500 hover:text-[#1c6e34]"
                 }`}
               >
                 <GearIcon />

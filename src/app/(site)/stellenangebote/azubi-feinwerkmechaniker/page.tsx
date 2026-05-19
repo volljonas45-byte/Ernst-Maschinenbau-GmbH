@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
@@ -49,7 +49,7 @@ export default function AzubiFeinwerkmechanikerPage() {
               Als Hersteller von Sondermaschinen sind wir als Familienunternehmen seit über 60 Jahren international erfolgreich am Markt.
             </p>
             <p className="reveal delay-100" style={{ fontSize: 16, color: "#424245", lineHeight: 1.75, marginBottom: 20 }}>
-              Zur Verstärkung unseres Teams suchen wir ab dem <strong style={{ color: "#1a8a3c" }}>01. September 2024</strong> einen Auszubildenden zum Feinwerkmechaniker (m/w/d).
+              Zur Verstärkung unseres Teams suchen wir ab dem <strong style={{ color: "#1c6e34" }}>01. September 2024</strong> einen Auszubildenden zum Feinwerkmechaniker (m/w/d).
             </p>
           </div>
         </div>
@@ -62,15 +62,15 @@ export default function AzubiFeinwerkmechanikerPage() {
             {/* Aufgaben */}
             <div className="reveal-left" style={{ background: "#fff", borderRadius: 18, padding: "32px", border: "1px solid rgba(0,0,0,0.06)", boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(26,138,60,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg width="22" height="22" fill="none" stroke="#1a8a3c" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(28,110,52,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <svg width="22" height="22" fill="none" stroke="#1c6e34" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
                 </div>
                 <h2 style={{ fontSize: 18, fontWeight: 800, color: "#1d1d1f", letterSpacing: "-0.02em" }}>Was erwartet dich</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {aufgaben.map((a, i) => (
                   <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1a8a3c" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     <p style={{ fontSize: 14, color: "#424245", lineHeight: 1.55 }}>{a}</p>
                   </div>
                 ))}
@@ -80,15 +80,15 @@ export default function AzubiFeinwerkmechanikerPage() {
             {/* Anforderungen */}
             <div className="reveal-right" style={{ background: "#fff", borderRadius: 18, padding: "32px", border: "1px solid rgba(0,0,0,0.06)", boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(26,138,60,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg width="22" height="22" fill="none" stroke="#1a8a3c" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(28,110,52,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <svg width="22" height="22" fill="none" stroke="#1c6e34" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
                 </div>
                 <h2 style={{ fontSize: 18, fontWeight: 800, color: "#1d1d1f", letterSpacing: "-0.02em" }}>Das bringst du mit</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {anforderungen.map((a, i) => (
                   <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1a8a3c" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     <p style={{ fontSize: 14, color: "#424245", lineHeight: 1.55 }}>{a}</p>
                   </div>
                 ))}
@@ -99,7 +99,7 @@ export default function AzubiFeinwerkmechanikerPage() {
       </section>
 
       {/* Kontakt CTA */}
-      <section style={{ background: "#1a8a3c", padding: "72px 0" }}>
+      <section style={{ background: "#1c6e34", padding: "72px 0" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }} className="two-col-stack">
             <div className="reveal-left">
@@ -112,7 +112,7 @@ export default function AzubiFeinwerkmechanikerPage() {
               </p>
               <a href="mailto:info@ernstmaschinen.de" style={{
                 display: "inline-flex", alignItems: "center", gap: 8,
-                background: "#fff", color: "#1a8a3c",
+                background: "#fff", color: "#1c6e34",
                 padding: "12px 24px", borderRadius: 999,
                 fontSize: 14, fontWeight: 700, textDecoration: "none",
                 transition: "transform 0.2s",
@@ -141,7 +141,7 @@ export default function AzubiFeinwerkmechanikerPage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <Link href="/stellenangebote" style={{
             display: "inline-flex", alignItems: "center", gap: 8,
-            fontSize: 14, fontWeight: 600, color: "#1a8a3c", textDecoration: "none",
+            fontSize: 14, fontWeight: 600, color: "#1c6e34", textDecoration: "none",
           }}>
             <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
             Zurück zur Übersicht

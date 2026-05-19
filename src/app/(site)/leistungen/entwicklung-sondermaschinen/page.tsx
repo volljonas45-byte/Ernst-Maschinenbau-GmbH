@@ -40,7 +40,7 @@ export default function EntwicklungPage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }} className="two-col-stack">
             <div className="reveal-left">
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Konstruktion</p>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Konstruktion</p>
               <h2 style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", marginBottom: 20, lineHeight: 1.2 }}>
                 Maßgeschneiderte Lösungen von Anfang an
               </h2>
@@ -59,14 +59,14 @@ export default function EntwicklungPage() {
       </section>
 
       {/* Sondermaschinen – dunkel */}
-      <section style={{ background: "#0c1a30", padding: "80px 0" }}>
+      <section className="section-fade-from-white" style={{ background: "#0c1a30", padding: "80px 0" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }} className="two-col-stack">
             <div className="reveal-left" style={{ borderRadius: 18, overflow: "hidden", aspectRatio: "4/3", position: "relative" }}>
               <Image src={asset("/bild2-27805c5e.webp")} alt="Sondermaschinen" fill style={{ objectFit: "cover" }} />
             </div>
             <div className="reveal-right">
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#22c55e", marginBottom: 12 }}>Sondermaschinen</p>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#2a8d4a", marginBottom: 12 }}>Sondermaschinen</p>
               <h2 style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#fff", marginBottom: 20, lineHeight: 1.2 }}>
                 Individuell für jede Branche
               </h2>
@@ -81,7 +81,7 @@ export default function EntwicklungPage() {
       {/* Stärken-Grid */}
       <section style={{ background: "#f5f5f7", padding: "80px 0" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
-          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Unsere Stärken</p>
+          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Unsere Stärken</p>
           <h2 className="reveal delay-100" style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", marginBottom: 36 }}>
             Warum Ernst Maschinenbau?
           </h2>
@@ -92,8 +92,8 @@ export default function EntwicklungPage() {
                 border: "1px solid rgba(0,0,0,0.06)",
                 boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
               }}>
-                <div style={{ width: 36, height: 36, borderRadius: 10, background: "rgba(26,138,60,0.08)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
-                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#1a8a3c" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <div style={{ width: 36, height: 36, borderRadius: 10, background: "rgba(28,110,52,0.08)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
                 <h3 style={{ fontSize: 14, fontWeight: 700, color: "#1d1d1f", marginBottom: 8 }}>{s.title}</h3>
                 <p style={{ fontSize: 13, color: "#6e6e73", lineHeight: 1.6 }}>{s.desc}</p>

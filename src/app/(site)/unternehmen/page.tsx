@@ -83,7 +83,7 @@ export default function UnternehmenPage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }} className="two-col-stack">
             <div className="reveal-left">
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 14 }}>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 14 }}>
                 Über uns
               </p>
               <h2 style={{ fontSize: "clamp(1.6rem,2.8vw,2.4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", marginBottom: 24, lineHeight: 1.15 }}>
@@ -98,7 +98,7 @@ export default function UnternehmenPage() {
               <div style={{ display: "flex", gap: 40, marginTop: 36 }}>
                 {[["60+", "Jahre Erfahrung"], ["500+", "Sondermaschinen"], ["50+", "Länder weltweit"]].map(([num, lbl]) => (
                   <div key={lbl}>
-                    <div style={{ fontSize: "1.8rem", fontWeight: 800, color: "#1a8a3c", letterSpacing: "-0.04em" }}>{num}</div>
+                    <div style={{ fontSize: "1.8rem", fontWeight: 800, color: "#1c6e34", letterSpacing: "-0.04em" }}>{num}</div>
                     <div style={{ fontSize: 12, color: "#6e6e73", marginTop: 2 }}>{lbl}</div>
                   </div>
                 ))}
@@ -130,14 +130,14 @@ export default function UnternehmenPage() {
       {/* Vertikale Timeline */}
       <section style={{ background: "#f5f5f7", padding: "80px 0" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
-          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Geschichte</p>
+          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Geschichte</p>
           <h2 className="reveal delay-100" style={{ fontSize: "clamp(1.6rem,2.8vw,2.4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", marginBottom: 56, lineHeight: 1.15 }}>
             Über 60 Jahre Unternehmensgeschichte
           </h2>
 
           <div style={{ position: "relative" }}>
             {/* Vertikale Linie */}
-            <div style={{ position: "absolute", left: 19, top: 8, bottom: 8, width: 2, background: "linear-gradient(to bottom, rgba(26,138,60,0.15), rgba(26,138,60,0.5) 50%, rgba(26,138,60,0.15))" }} />
+            <div style={{ position: "absolute", left: 19, top: 8, bottom: 8, width: 2, background: "linear-gradient(to bottom, rgba(28,110,52,0.15), rgba(28,110,52,0.5) 50%, rgba(28,110,52,0.15))" }} />
 
             <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
               {historieSteps.map((step, i) => {
@@ -148,13 +148,13 @@ export default function UnternehmenPage() {
                     <div style={{ flexShrink: 0, width: 40, display: "flex", justifyContent: "center", paddingTop: 2 }}>
                       <div style={{
                         width: 40, height: 40, borderRadius: "50%",
-                        background: isLast ? "#1a8a3c" : "#fff",
-                        border: `2px solid ${isLast ? "#1a8a3c" : "rgba(0,0,0,0.12)"}`,
+                        background: isLast ? "#1c6e34" : "#fff",
+                        border: `2px solid ${isLast ? "#1c6e34" : "rgba(0,0,0,0.12)"}`,
                         display: "flex", alignItems: "center", justifyContent: "center",
-                        boxShadow: isLast ? "0 0 0 5px rgba(26,138,60,0.15)" : "0 1px 6px rgba(0,0,0,0.08)",
+                        boxShadow: isLast ? "0 0 0 5px rgba(28,110,52,0.15)" : "0 1px 6px rgba(0,0,0,0.08)",
                         position: "relative", zIndex: 1,
                       }}>
-                        <div style={{ width: 10, height: 10, borderRadius: "50%", background: isLast ? "#fff" : "#1a8a3c" }} />
+                        <div style={{ width: 10, height: 10, borderRadius: "50%", background: isLast ? "#fff" : "#1c6e34" }} />
                       </div>
                     </div>
 
@@ -174,7 +174,7 @@ export default function UnternehmenPage() {
                         </div>
                       )}
                       <div style={{ padding: "22px 26px" }}>
-                        <span style={{ display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fff", background: "#1a8a3c", borderRadius: 999, padding: "3px 12px", marginBottom: 12 }}>
+                        <span style={{ display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fff", background: "#1c6e34", borderRadius: 999, padding: "3px 12px", marginBottom: 12 }}>
                           {step.year}
                         </span>
                         <h3 style={{ fontSize: 17, fontWeight: 700, color: "#1d1d1f", letterSpacing: "-0.02em", marginBottom: 8 }}>
@@ -216,7 +216,7 @@ export default function UnternehmenPage() {
                 <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: 24 }}>
                   <h3 style={{ fontSize: 20, fontWeight: 800, color: "#fff", marginBottom: 6, letterSpacing: "-0.02em" }}>{card.title}</h3>
                   <p style={{ fontSize: 13, color: "rgba(255,255,255,0.65)" }}>{card.desc}</p>
-                  <div style={{ marginTop: 12, display: "flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "#22c55e" }}>
+                  <div style={{ marginTop: 12, display: "flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "#2a8d4a" }}>
                     Mehr erfahren
                     <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
                   </div>

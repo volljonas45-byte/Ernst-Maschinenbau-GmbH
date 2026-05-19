@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import PageHero from "@/components/PageHero";
@@ -43,7 +43,7 @@ export default function SystemergaenzungenPage() {
       <section style={{ background: "#fff", padding: "72px 0 56px" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ maxWidth: 680 }} className="reveal">
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Flexibel erweiterbar</p>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Flexibel erweiterbar</p>
             <h2 style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", marginBottom: 16, lineHeight: 1.2 }}>
               Passende Ergänzungen für Ihre Produktionslinie
             </h2>
@@ -62,7 +62,7 @@ export default function SystemergaenzungenPage() {
               <div key={e.name} className={`reveal delay-${Math.min(i * 60, 500)}`} style={{
                 background: "#fff",
                 border: "1px solid rgba(0,0,0,0.06)",
-                borderLeft: "3px solid #1a8a3c",
+                borderLeft: "3px solid #1c6e34",
                 borderRadius: "0 12px 12px 0",
                 padding: "18px 20px",
                 boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
@@ -78,7 +78,7 @@ export default function SystemergaenzungenPage() {
       {/* Produkt-Bilder */}
       <section style={{ background: "#fff", padding: "72px 0" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
-          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Beispiele</p>
+          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Beispiele</p>
           <h2 className="reveal delay-100" style={{ fontSize: "clamp(1.2rem,1.8vw,1.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1d1d1f", marginBottom: 28 }}>
             Ausgewählte Systemergänzungen
           </h2>

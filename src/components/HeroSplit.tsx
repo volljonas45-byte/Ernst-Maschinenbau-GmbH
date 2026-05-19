@@ -11,7 +11,7 @@ export default function HeroSplit({
   imageSrc,
   title,
   bullets = [],
-  bgColor = "#1a8a3c",
+  bgColor = "#1c6e34",
 }: HeroSplitProps) {
   return (
     <div className="relative w-full h-64 md:h-80 flex overflow-hidden">

@@ -81,7 +81,7 @@ export default function ProduktbeispielePage() {
             <p className="reveal" style={{ fontSize: 16, color: "#424245", lineHeight: 1.75, marginBottom: 14 }}>
               Bekommen Sie einen Eindruck von unserem Produktionsbereich, dem Herzstück unseres Unternehmens.
             </p>
-            <p className="reveal delay-100" style={{ fontSize: 16, color: "#1a8a3c", lineHeight: 1.75 }}>
+            <p className="reveal delay-100" style={{ fontSize: 16, color: "#1c6e34", lineHeight: 1.75 }}>
               Unsere Fertigung verbindet modernste Fertigungstechnologie wie CNC-Maschinen mit der Flexibilität und Qualitätskontrolle durch manuellen Arbeitseinsatz.
             </p>
           </div>
@@ -105,7 +105,7 @@ export default function ProduktbeispielePage() {
       {/* Branchen-Cards */}
       <section style={{ background: "#f5f5f7", padding: "72px 0" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
-          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Branchen</p>
+          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Branchen</p>
           <h2 className="reveal delay-100" style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", marginBottom: 36 }}>
             Sortierung nach Branchen
           </h2>
@@ -120,9 +120,9 @@ export default function ProduktbeispielePage() {
               }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: 12,
-                  background: "rgba(26,138,60,0.08)",
+                  background: "rgba(28,110,52,0.08)",
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  color: "#1a8a3c", marginBottom: 18,
+                  color: "#1c6e34", marginBottom: 18,
                 }}>
                   {b.icon}
                 </div>
@@ -132,7 +132,7 @@ export default function ProduktbeispielePage() {
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
                   {b.produkte.map(p => (
                     <li key={p} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 13.5, color: "#424245" }}>
-                      <svg style={{ flexShrink: 0, marginTop: 2 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1a8a3c" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <svg style={{ flexShrink: 0, marginTop: 2 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="20 6 9 17 4 12"/>
                       </svg>
                       {p}

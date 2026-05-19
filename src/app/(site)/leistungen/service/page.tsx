@@ -52,7 +52,7 @@ export default function ServicePage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }} className="two-col-stack">
             <div className="reveal-left">
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Unser Ansatz</p>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Unser Ansatz</p>
               <h2 style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", marginBottom: 20, lineHeight: 1.2 }}>
                 Allgemeiner Service ist gut.<br />Individueller Service ist besser.
               </h2>
@@ -62,7 +62,7 @@ export default function ServicePage() {
               <div style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 24 }}>
                 {leistungen.map((l) => (
                   <div key={l.title} style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
-                    <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(26,138,60,0.08)", display: "flex", alignItems: "center", justifyContent: "center", color: "#1a8a3c", flexShrink: 0 }}>
+                    <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(28,110,52,0.08)", display: "flex", alignItems: "center", justifyContent: "center", color: "#1c6e34", flexShrink: 0 }}>
                       {l.icon}
                     </div>
                     <div>
@@ -81,9 +81,9 @@ export default function ServicePage() {
       </section>
 
       {/* CTA dunkel */}
-      <section style={{ background: "#0c1a30", padding: "80px 0" }}>
+      <section className="section-fade-from-white" style={{ background: "#0c1a30", padding: "80px 0" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)", textAlign: "center" }}>
-          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#22c55e", marginBottom: 16 }}>Service anfragen</p>
+          <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#2a8d4a", marginBottom: 16 }}>Service anfragen</p>
           <h2 className="reveal delay-100" style={{ fontSize: "clamp(1.4rem,2.5vw,2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#fff", marginBottom: 16 }}>
             Wartung oder Reparatur nötig?
           </h2>

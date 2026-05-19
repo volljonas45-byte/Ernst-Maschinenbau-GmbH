@@ -86,7 +86,7 @@ export default function LeistungenUebersichtPage() {
                 const el = e.currentTarget as HTMLElement;
                 el.style.boxShadow = "0 12px 40px rgba(0,0,0,0.1)";
                 el.style.transform = "translateY(-3px)";
-                el.style.borderColor = "rgba(26,138,60,0.2)";
+                el.style.borderColor = "rgba(28,110,52,0.2)";
               }}
               onMouseLeave={e => {
                 const el = e.currentTarget as HTMLElement;
@@ -98,13 +98,13 @@ export default function LeistungenUebersichtPage() {
               {/* Bild */}
               <div style={{ position: "relative", overflow: "hidden", minHeight: 220 }}>
                 <Image src={asset(l.img)} alt={l.title} fill sizes="340px" style={{ objectFit: "cover" }} />
-                <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 4, background: "#1a8a3c", zIndex: 2 }} />
+                <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 4, background: "#1c6e34", zIndex: 2 }} />
               </div>
 
               {/* Inhalt */}
               <div style={{ padding: "32px 36px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
                 <div style={{ marginBottom: 12 }}>
-                  <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 6 }}>
+                  <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 6 }}>
                     {l.subtitle}
                   </p>
                   <h2 style={{ fontSize: "clamp(1.2rem,1.8vw,1.6rem)", fontWeight: 700, color: "#1d1d1f", letterSpacing: "-0.025em", lineHeight: 1.2 }}>
@@ -122,12 +122,12 @@ export default function LeistungenUebersichtPage() {
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5px 32px" }}>
                     {l.specs.map(s => (
                       <span key={s} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12.5, color: "#6e6e73" }}>
-                        <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1a8a3c", flexShrink: 0 }} />
+                        <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1c6e34", flexShrink: 0 }} />
                         {s}
                       </span>
                     ))}
                   </div>
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "#1a8a3c", flexShrink: 0, whiteSpace: "nowrap" }}>
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "#1c6e34", flexShrink: 0, whiteSpace: "nowrap" }}>
                     Mehr erfahren
                     <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                       <path d="M9 5l7 7-7 7"/>

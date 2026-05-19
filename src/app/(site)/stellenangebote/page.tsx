@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
@@ -47,7 +47,7 @@ export default function StellenangebotePage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 64, alignItems: "start" }} className="two-col-stack">
             <div className="reveal">
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a8a3c", marginBottom: 12 }}>Offene Stellen</p>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1c6e34", marginBottom: 12 }}>Offene Stellen</p>
               <h2 style={{ fontSize: "clamp(1.4rem,2.2vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1d1d1f", lineHeight: 1.2 }}>
                 {stellen.length} offene Positionen
               </h2>
@@ -82,7 +82,7 @@ export default function StellenangebotePage() {
                   const el = e.currentTarget as HTMLElement;
                   el.style.transform = "translateY(-6px)";
                   el.style.boxShadow = "0 16px 48px rgba(0,0,0,0.1)";
-                  el.style.borderColor = "rgba(26,138,60,0.3)";
+                  el.style.borderColor = "rgba(28,110,52,0.3)";
                 }}
                 onMouseLeave={e => {
                   const el = e.currentTarget as HTMLElement;
@@ -94,7 +94,7 @@ export default function StellenangebotePage() {
                 <span style={{
                   display: "inline-block", fontSize: 11, fontWeight: 700,
                   letterSpacing: "0.1em", textTransform: "uppercase",
-                  color: "#1a8a3c", background: "rgba(26,138,60,0.08)",
+                  color: "#1c6e34", background: "rgba(28,110,52,0.08)",
                   borderRadius: 999, padding: "4px 12px", marginBottom: 18,
                 }}>
                   {s.badge}
@@ -106,12 +106,12 @@ export default function StellenangebotePage() {
                 <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px", display: "flex", flexDirection: "column", gap: 8 }}>
                   {s.punkte.map(p => (
                     <li key={p} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: "#424245" }}>
-                      <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#1a8a3c" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                       {p}
                     </li>
                   ))}
                 </ul>
-                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "#1a8a3c" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "#1c6e34" }}>
                   Mehr erfahren
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
                 </div>

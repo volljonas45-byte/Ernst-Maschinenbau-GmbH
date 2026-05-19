@@ -58,10 +58,10 @@ export default function Navbar() {
                   fontSize: 15,
                   fontWeight: 500,
                   letterSpacing: "-0.01em",
-                  color: active ? "#1a8a3c" : "#1d1d1f",
+                  color: active ? "#1c6e34" : "#1d1d1f",
                   textDecoration: "none",
                   transition: "all 0.18s",
-                  background: active ? "rgba(26,138,60,0.08)" : "transparent",
+                  background: active ? "rgba(28,110,52,0.08)" : "transparent",
                   fontFamily: "-apple-system, 'SF Pro Text', sans-serif",
                 }}
                 onMouseEnter={(e) => { if (!active) (e.currentTarget as HTMLElement).style.background = "rgba(0,0,0,0.05)"; }}
@@ -79,7 +79,7 @@ export default function Navbar() {
             href="tel:+4972639199-0"
             className="hidden lg:flex"
             style={{ alignItems: "center", gap: 6, fontSize: 14, fontWeight: 500, color: "#6e6e73", textDecoration: "none", transition: "color 0.2s" }}
-            onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = "#1a8a3c"}
+            onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = "#1c6e34"}
             onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = "#6e6e73"}
           >
             <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -93,7 +93,7 @@ export default function Navbar() {
             className="hidden md:inline-flex"
             style={{
               alignItems: "center", gap: 6,
-              background: "#1a8a3c",
+              background: "#1c6e34",
               color: "#fff",
               padding: "8px 18px",
               borderRadius: 999,
@@ -102,11 +102,11 @@ export default function Navbar() {
               letterSpacing: "-0.01em",
               textDecoration: "none",
               transition: "all 0.2s cubic-bezier(0.22,1,0.36,1)",
-              boxShadow: "0 2px 12px rgba(26,138,60,0.3)",
+              boxShadow: "0 2px 12px rgba(28,110,52,0.3)",
               fontFamily: "-apple-system, 'SF Pro Text', sans-serif",
             }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#146830"; (e.currentTarget as HTMLElement).style.transform = "scale(1.03)"; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#1a8a3c"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#155228"; (e.currentTarget as HTMLElement).style.transform = "scale(1.03)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#1c6e34"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
           >
             Kontakt
             <svg width="14" height="14" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -154,9 +154,9 @@ export default function Navbar() {
                 borderRadius: 12,
                 fontSize: 15,
                 fontWeight: 500,
-                color: pathname === item.href ? "#1a8a3c" : "#1d1d1f",
+                color: pathname === item.href ? "#1c6e34" : "#1d1d1f",
                 textDecoration: "none",
-                background: pathname === item.href ? "rgba(26,138,60,0.08)" : "transparent",
+                background: pathname === item.href ? "rgba(28,110,52,0.08)" : "transparent",
                 marginBottom: 2,
                 letterSpacing: "-0.01em",
               }}
@@ -169,7 +169,7 @@ export default function Navbar() {
             style={{
               display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
               marginTop: 8, padding: "13px",
-              background: "#1a8a3c", color: "#fff",
+              background: "#1c6e34", color: "#fff",
               borderRadius: 14, fontSize: 15, fontWeight: 600,
               textDecoration: "none", letterSpacing: "-0.01em",
             }}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
@@ -56,7 +56,7 @@ export default function ElektrotechnikerPage() {
               Als Hersteller von Sondermaschinen sind wir als Familienunternehmen seit über 60 Jahren international erfolgreich am Markt.
             </p>
             <p className="reveal delay-100" style={{ fontSize: 16, color: "#424245", lineHeight: 1.75 }}>
-              Zur Verstärkung unseres Teams suchen wir einen <strong style={{ color: "#1a8a3c" }}>Elektrotechniker (m/w/d)</strong> zur Montage von Baugruppen und Sondermaschinen.
+              Zur Verstärkung unseres Teams suchen wir einen <strong style={{ color: "#1c6e34" }}>Elektrotechniker (m/w/d)</strong> zur Montage von Baugruppen und Sondermaschinen.
             </p>
           </div>
         </div>
@@ -68,15 +68,15 @@ export default function ElektrotechnikerPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }} className="two-col-stack">
             <div className="reveal-left" style={{ background: "#fff", borderRadius: 18, padding: "32px", border: "1px solid rgba(0,0,0,0.06)", boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(26,138,60,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg width="22" height="22" fill="none" stroke="#1a8a3c" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(28,110,52,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <svg width="22" height="22" fill="none" stroke="#1c6e34" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                 </div>
                 <h2 style={{ fontSize: 18, fontWeight: 800, color: "#1d1d1f", letterSpacing: "-0.02em" }}>Ihre Aufgabenbereiche</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {aufgaben.map((a, i) => (
                   <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1a8a3c" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     <p style={{ fontSize: 14, color: "#424245", lineHeight: 1.55 }}>{a}</p>
                   </div>
                 ))}
@@ -84,15 +84,15 @@ export default function ElektrotechnikerPage() {
             </div>
             <div className="reveal-right" style={{ background: "#fff", borderRadius: 18, padding: "32px", border: "1px solid rgba(0,0,0,0.06)", boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(26,138,60,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg width="22" height="22" fill="none" stroke="#1a8a3c" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(28,110,52,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <svg width="22" height="22" fill="none" stroke="#1c6e34" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
                 </div>
                 <h2 style={{ fontSize: 18, fontWeight: 800, color: "#1d1d1f", letterSpacing: "-0.02em" }}>Das zeichnet Sie aus</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {anforderungen.map((a, i) => (
                   <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1a8a3c" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     <p style={{ fontSize: 14, color: "#424245", lineHeight: 1.55 }}>{a}</p>
                   </div>
                 ))}
@@ -103,15 +103,15 @@ export default function ElektrotechnikerPage() {
           {/* Benefits */}
           <div className="reveal" style={{ background: "#0c1a30", borderRadius: 18, padding: "32px", marginTop: 24 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(34,197,94,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <svg width="22" height="22" fill="none" stroke="#22c55e" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(42,141,74,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <svg width="22" height="22" fill="none" stroke="#2a8d4a" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               </div>
               <h2 style={{ fontSize: 18, fontWeight: 800, color: "#fff", letterSpacing: "-0.02em" }}>Wir bieten Ihnen</h2>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 12 }}>
               {benefits.map((b, i) => (
                 <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                  <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#22c55e" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#2a8d4a" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   <p style={{ fontSize: 14, color: "rgba(255,255,255,0.75)", lineHeight: 1.55 }}>{b}</p>
                 </div>
               ))}
@@ -121,7 +121,7 @@ export default function ElektrotechnikerPage() {
       </section>
 
       {/* Kontakt CTA */}
-      <section style={{ background: "#1a8a3c", padding: "72px 0" }}>
+      <section style={{ background: "#1c6e34", padding: "72px 0" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }} className="two-col-stack">
             <div className="reveal-left">
@@ -134,7 +134,7 @@ export default function ElektrotechnikerPage() {
               </p>
               <a href="mailto:info@ernstmaschinen.de" style={{
                 display: "inline-flex", alignItems: "center", gap: 8,
-                background: "#fff", color: "#1a8a3c",
+                background: "#fff", color: "#1c6e34",
                 padding: "12px 24px", borderRadius: 999,
                 fontSize: 14, fontWeight: 700, textDecoration: "none",
                 transition: "transform 0.2s",
@@ -163,7 +163,7 @@ export default function ElektrotechnikerPage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <Link href="/stellenangebote" style={{
             display: "inline-flex", alignItems: "center", gap: 8,
-            fontSize: 14, fontWeight: 600, color: "#1a8a3c", textDecoration: "none",
+            fontSize: 14, fontWeight: 600, color: "#1c6e34", textDecoration: "none",
           }}>
             <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
             Zurück zur Übersicht
