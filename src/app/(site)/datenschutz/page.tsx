@@ -1,3 +1,5 @@
+"use client";
+
 export default function DatenschutzPage() {
   return (
     <div style={{ background: "#f5f5f7", minHeight: "60vh", padding: "80px 0" }}>
