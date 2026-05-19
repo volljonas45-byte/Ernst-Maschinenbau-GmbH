@@ -1,0 +1,272 @@
+@import "tailwindcss";
+
+/* ── Responsive grid helpers ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .two-col-stack   { grid-template-columns: 1fr !important; }
+  .three-col-stack { grid-template-columns: 1fr !important; }
+  .four-col-stack  { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 480px) {
+  .four-col-stack  { grid-template-columns: 1fr !important; }
+}
+
+/* ── RelatedLinks grid responsive ────────────────────────────── */
+.related-grid { grid-template-columns: repeat(3, 1fr) !important; }
+@media (max-width: 900px) { .related-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 560px) { .related-grid { grid-template-columns: 1fr !important; } }
+
+/* ── Produkt card image hover zoom ───────────────────────────── */
+.produkt-card-img { min-height: 200px; }
+a:hover .produkt-card-img img { transform: scale(1.05) !important; }
+
+/* ── Navbar burger button ─────────────────────────────────────── */
+.burger-btn { display: none; }
+@media (max-width: 1023px) { .burger-btn { display: flex; } }
+
+/* ── Design tokens ────────────────────────────────────────────── */
+:root {
+  --green:       #1a8a3c;
+  --green-dark:  #146830;
+  --green-light: #22c55e;
+  --green-dim:   #e8f5ee;
+  --navy:        #0c1a30;
+  --navy-mid:    #13233f;
+  --off:         #f5f5f7;
+  --off-2:       #fafafa;
+  --text:        #1d1d1f;
+  --text-2:      #424245;
+  --text-3:      #6e6e73;
+  --border:      rgba(0,0,0,0.08);
+  --border-light:rgba(0,0,0,0.05);
+  --radius-xl:   28px;
+  --radius-2xl:  40px;
+}
+
+@theme inline {
+  --color-green:      var(--green);
+  --color-green-dark: var(--green-dark);
+  --color-navy:       var(--navy);
+  --color-off:        var(--off);
+  --color-text:       var(--text);
+  --color-text-2:     var(--text-2);
+  --color-text-3:     var(--text-3);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+  background: #fff;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── SF-style headline ────────────────────────────────────────── */
+.headline-sf {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+}
+.headline-md {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+.headline-sm {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.body-lg {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--text-2);
+}
+.caption {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+/* ── Scroll reveal ────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1),
+              transform 0.75s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1),
+              transform 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1),
+              transform 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1),
+              transform 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+
+/* ── Apple-style pill button ──────────────────────────────────── */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: all 0.2s cubic-bezier(0.22,1,0.36,1);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-pill:hover { transform: scale(1.03); }
+.btn-pill:active { transform: scale(0.97); }
+.btn-green {
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(26,138,60,0.35);
+}
+.btn-green:hover { background: var(--green-dark); }
+.btn-outline {
+  background: transparent;
+  color: var(--green);
+  border: 1.5px solid var(--green);
+}
+.btn-outline:hover { background: var(--green-dim); }
+.btn-ghost {
+  background: rgba(0,0,0,0.05);
+  color: var(--text);
+}
+.btn-ghost:hover { background: rgba(0,0,0,0.08); }
+
+/* ── Glass card ───────────────────────────────────────────────── */
+.glass {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.6);
+}
+.glass-dark {
+  background: rgba(12,26,48,0.75);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ── Hover cards ──────────────────────────────────────────────── */
+.card-hover {
+  transition: transform 0.32s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.32s cubic-bezier(0.22,1,0.36,1);
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.12);
+}
+
+/* ── Gradient text ────────────────────────────────────────────── */
+.grad-text {
+  background: linear-gradient(135deg, var(--green) 0%, #22c55e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section dividers ─────────────────────────────────────────── */
+.section { padding: 120px 0; }
+.section-sm { padding: 80px 0; }
+.container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 48px); }
+
+/* ── Ticker / horizontal scroll ──────────────────────────────── */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.ticker-track {
+  display: flex;
+  animation: ticker 28s linear infinite;
+  width: max-content;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ── Pulse dot ────────────────────────────────────────────────── */
+@keyframes pulseDot {
+  0%,100% { box-shadow: 0 0 0 0 rgba(26,138,60,0.5); }
+  50%      { box-shadow: 0 0 0 8px rgba(26,138,60,0); }
+}
+.pulse-dot { animation: pulseDot 2s ease-in-out infinite; }
+
+/* ── Number counter ───────────────────────────────────────────── */
+@keyframes countIn {
+  from { opacity:0; transform: translateY(12px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+.count-in { animation: countIn 0.6s cubic-bezier(0.22,1,0.36,1) both; }
+
+/* ── Green list ───────────────────────────────────────────────── */
+.green-list li {
+  list-style: none;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.4rem;
+  color: var(--text-2);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.green-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 9px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+/* ── Hide scrollbar utility (tabs, timeline overflow) ────────── */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ── Leistungs tab slide animations ──────────────────────────── */
+@keyframes slideInR {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInL {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
