@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import RelatedLinks from "@/components/RelatedLinks";
+import { asset } from "@/lib/assetPath";
 
 const staerken = [
   { title: "Jahrzehntelange Erfahrung", desc: "Über 60 Jahre Sondermaschinenkonstruktion – internationaler Erfahrungsschatz in 50+ Ländern." },
@@ -51,7 +52,7 @@ export default function EntwicklungPage() {
               </p>
             </div>
             <div className="reveal-right" style={{ borderRadius: 18, overflow: "hidden", aspectRatio: "4/3", position: "relative" }}>
-              <Image src="/sonder-maschinenbau-c3482bd2.webp" alt="Sondermaschinenbau" fill style={{ objectFit: "cover" }} />
+              <Image src={asset("/sonder-maschinenbau-c3482bd2.webp")} alt="Sondermaschinenbau" fill style={{ objectFit: "cover" }} />
             </div>
           </div>
         </div>
@@ -62,7 +63,7 @@ export default function EntwicklungPage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }} className="two-col-stack">
             <div className="reveal-left" style={{ borderRadius: 18, overflow: "hidden", aspectRatio: "4/3", position: "relative" }}>
-              <Image src="/bild2-27805c5e.webp" alt="Sondermaschinen" fill style={{ objectFit: "cover" }} />
+              <Image src={asset("/bild2-27805c5e.webp")} alt="Sondermaschinen" fill style={{ objectFit: "cover" }} />
             </div>
             <div className="reveal-right">
               <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#22c55e", marginBottom: 12 }}>Sondermaschinen</p>

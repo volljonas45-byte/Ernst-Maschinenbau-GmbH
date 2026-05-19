@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import { asset } from "@/lib/assetPath";
 
 const inputStyle = {
   width: "100%",
@@ -146,7 +147,7 @@ export default function KontaktPage() {
                   ].map(p => (
                     <div key={p.name} style={{ display: "flex", alignItems: "center", gap: 16, padding: "14px", background: "#f5f5f7", borderRadius: 14 }}>
                       <div style={{ width: 56, height: 56, borderRadius: "50%", overflow: "hidden", flexShrink: 0, position: "relative", border: "2px solid rgba(26,138,60,0.15)" }}>
-                        <Image src={p.img} alt={p.name} fill style={{ objectFit: "cover" }} />
+                        <Image src={asset(p.img)} alt={p.name} fill style={{ objectFit: "cover" }} />
                       </div>
                       <div style={{ minWidth: 0 }}>
                         <p style={{ fontSize: 14, fontWeight: 700, color: "#1d1d1f", marginBottom: 2 }}>{p.name}</p>

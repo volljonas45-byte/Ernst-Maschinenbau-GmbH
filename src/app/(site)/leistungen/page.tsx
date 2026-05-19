@@ -1,10 +1,11 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import RelatedLinks from "@/components/RelatedLinks";
+import { asset } from "@/lib/assetPath";
 
 const leistungen = [
   {
@@ -96,7 +97,7 @@ export default function LeistungenUebersichtPage() {
             >
               {/* Bild */}
               <div style={{ position: "relative", overflow: "hidden", minHeight: 220 }}>
-                <Image src={l.img} alt={l.title} fill sizes="340px" style={{ objectFit: "cover" }} />
+                <Image src={asset(l.img)} alt={l.title} fill sizes="340px" style={{ objectFit: "cover" }} />
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 4, background: "#1a8a3c", zIndex: 2 }} />
               </div>
 

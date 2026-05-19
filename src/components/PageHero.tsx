@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const ASSET_PREFIX = process.env.NODE_ENV === "production" ? "/Ernst-Maschinenbau-GmbH" : "";
+
 interface Crumb { label: string; href?: string }
 
 interface PageHeroProps {
@@ -38,7 +40,7 @@ export default function PageHero({
         <div
           style={{
             position: "absolute", inset: 0,
-            backgroundImage: `url(${imageSrc})`,
+            backgroundImage: `url(${imageSrc.startsWith("/") ? ASSET_PREFIX + imageSrc : imageSrc})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

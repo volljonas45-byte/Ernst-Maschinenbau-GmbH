@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import FaqAccordion from "@/components/FaqAccordion";
+import { asset } from "@/lib/assetPath";
 
 /* ════════════════════════════════════════════════════════════════
    HOOKS
@@ -197,10 +198,10 @@ function HeroCarousel() {
 
   return (
     <>
-      <Image key={`base-${current}`} src={heroSlides[current].src} alt="Ernst Maschinenbau" fill priority={current === 0}
+      <Image key={`base-${current}`} src={asset(heroSlides[current].src)} alt="Ernst Maschinenbau" fill priority={current === 0}
         style={{ objectFit: "cover", objectPosition: heroSlides[current].pos, zIndex: 1 }} sizes="100vw" />
       {next !== null && (
-        <Image key={`next-${next}`} src={heroSlides[next].src} alt="" fill
+        <Image key={`next-${next}`} src={asset(heroSlides[next].src)} alt="" fill
           style={{ objectFit: "cover", objectPosition: heroSlides[next].pos, zIndex: 2, opacity: crossfading ? 1 : 0, transition: `opacity ${FADE_MS}ms cubic-bezier(0.4,0,0.2,1)` }}
           sizes="100vw" />
       )}
@@ -358,7 +359,7 @@ export default function Home() {
 
                 {/* Photo */}
                 <div style={{ position: "relative", minHeight: 280, order: i % 2 === 0 ? 1 : 0 }}>
-                  <Image src={l.img} alt={l.title} fill style={{ objectFit: "cover" }} sizes="(max-width:768px) 100vw, 50vw" />
+                  <Image src={asset(l.img)} alt={l.title} fill style={{ objectFit: "cover" }} sizes="(max-width:768px) 100vw, 50vw" />
                   <div style={{ position: "absolute", inset: 0, background: `linear-gradient(135deg,${l.accent}22 0%,transparent 55%)` }} />
                   <div style={{ position: "absolute", top: 20, left: 20, background: "rgba(0,0,0,0.45)", backdropFilter: "blur(10px)", borderRadius: 12, padding: "8px 14px", border: "1px solid rgba(255,255,255,0.1)" }}>
                     <span style={{ fontSize: "1.6rem", fontWeight: 900, color: "#fff", letterSpacing: "-0.04em", opacity: 0.9 }}>{l.num}</span>
@@ -390,7 +391,7 @@ export default function Home() {
                 style={{ display: "flex", flexDirection: "column", background: "#fff", borderRadius: 24, overflow: "hidden", textDecoration: "none", border: "1px solid rgba(0,0,0,0.06)", transitionDelay: `${i * 60}ms` }}>
                 {/* Image */}
                 <div style={{ position: "relative", height: 200, background: "#f0f0f0", flexShrink: 0 }}>
-                  <Image src={p.img} alt={p.title} fill style={{ objectFit: "contain", padding: 20 }} sizes="(max-width:768px) 100vw, 25vw" />
+                  <Image src={asset(p.img)} alt={p.title} fill style={{ objectFit: "contain", padding: 20 }} sizes="(max-width:768px) 100vw, 25vw" />
                 </div>
                 {/* Content */}
                 <div style={{ padding: "24px 24px 28px", flex: 1, display: "flex", flexDirection: "column" }}>
@@ -430,7 +431,7 @@ export default function Home() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
                 {/* Wide team photo */}
                 <div style={{ gridColumn: "1 / -1", borderRadius: 22, overflow: "hidden", aspectRatio: "16/9", position: "relative" }}>
-                  <Image src="/besprechung_1.jpg" alt="Team Ernst Maschinenbau" fill style={{ objectFit: "cover" }} sizes="(max-width:768px) 100vw, 50vw" />
+                  <Image src={asset("/besprechung_1.jpg")} alt="Team Ernst Maschinenbau" fill style={{ objectFit: "cover" }} sizes="(max-width:768px) 100vw, 50vw" />
                   <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 50%)" }} />
                   <div style={{ position: "absolute", bottom: 16, left: 16, background: "rgba(26,138,60,0.15)", border: "1px solid rgba(26,138,60,0.35)", borderRadius: 999, padding: "6px 12px", display: "flex", alignItems: "center", gap: 7 }}>
                     <span className="pulse-dot" style={{ width: 7, height: 7, borderRadius: "50%", background: "#1a8a3c", display: "inline-block" }} />
@@ -439,7 +440,7 @@ export default function Home() {
                 </div>
                 {/* Portrait Armin */}
                 <div style={{ borderRadius: 18, overflow: "hidden", aspectRatio: "3/4", position: "relative" }}>
-                  <Image src="/armin_ernst.jpg" alt="Armin Ernst" fill style={{ objectFit: "cover", objectPosition: "top" }} sizes="25vw" />
+                  <Image src={asset("/armin_ernst.jpg")} alt="Armin Ernst" fill style={{ objectFit: "cover", objectPosition: "top" }} sizes="25vw" />
                   <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 12px", background: "linear-gradient(to top,rgba(0,0,0,0.75),transparent)" }}>
                     <p style={{ fontSize: 12, fontWeight: 700, color: "#fff", margin: 0 }}>Armin Ernst</p>
                     <p style={{ fontSize: 10, color: "rgba(255,255,255,0.65)", margin: 0 }}>Dipl.-Ing.</p>
@@ -447,7 +448,7 @@ export default function Home() {
                 </div>
                 {/* Portrait Martin */}
                 <div style={{ borderRadius: 18, overflow: "hidden", aspectRatio: "3/4", position: "relative" }}>
-                  <Image src="/martin_ernst.jpg" alt="Martin Ernst" fill style={{ objectFit: "cover", objectPosition: "top" }} sizes="25vw" />
+                  <Image src={asset("/martin_ernst.jpg")} alt="Martin Ernst" fill style={{ objectFit: "cover", objectPosition: "top" }} sizes="25vw" />
                   <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 12px", background: "linear-gradient(to top,rgba(0,0,0,0.75),transparent)" }}>
                     <p style={{ fontSize: 12, fontWeight: 700, color: "#fff", margin: 0 }}>Martin Ernst</p>
                     <p style={{ fontSize: 10, color: "rgba(255,255,255,0.65)", margin: 0 }}>Geschäftsführung</p>
@@ -586,7 +587,7 @@ export default function Home() {
       <section style={{ background: "var(--off)", padding: "clamp(40px,5vw,64px) 0" }}>
         <div className="container">
           <div className="reveal-scale" style={{ borderRadius: "clamp(20px,3vw,32px)", overflow: "hidden", position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 32, flexWrap: "wrap", padding: "clamp(36px,5vw,56px) clamp(24px,4vw,56px)" }}>
-            <Image src="/stellenangebote-e14feb92.webp" alt="Karriere" fill style={{ objectFit: "cover" }} sizes="100vw" />
+            <Image src={asset("/stellenangebote-e14feb92.webp")} alt="Karriere" fill style={{ objectFit: "cover" }} sizes="100vw" />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(110deg,rgba(22,104,48,0.95) 0%,rgba(26,138,60,0.82) 55%,rgba(26,138,60,0.55) 100%)" }} />
             <div style={{ position: "relative" }}>
               <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: 8 }}>Karriere</p>

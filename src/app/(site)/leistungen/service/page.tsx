@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import RelatedLinks from "@/components/RelatedLinks";
+import { asset } from "@/lib/assetPath";
 
 const leistungen = [
   {
@@ -73,7 +74,7 @@ export default function ServicePage() {
               </div>
             </div>
             <div className="reveal-right" style={{ borderRadius: 18, overflow: "hidden", aspectRatio: "4/3", position: "relative" }}>
-              <Image src="/service-2.jpg" alt="Service Ernst Maschinenbau" fill style={{ objectFit: "cover" }} />
+              <Image src={asset("/service-2.jpg")} alt="Service Ernst Maschinenbau" fill style={{ objectFit: "cover" }} />
             </div>
           </div>
         </div>

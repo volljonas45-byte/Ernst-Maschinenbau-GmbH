@@ -1,3 +1,5 @@
+﻿import { asset } from "@/lib/assetPath";
+
 interface ProductImageCardProps {
   src?: string;
   imageSrc?: string;
@@ -29,7 +31,7 @@ export default function ProductImageCard({ src, imageSrc, label, alt }: ProductI
       {/* Image */}
       {imgSrc ? (
         <img
-          src={imgSrc}
+          src={asset(imgSrc)}
           alt={alt || label}
           style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
         />

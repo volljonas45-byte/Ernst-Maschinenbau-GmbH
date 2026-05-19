@@ -1,7 +1,8 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/assetPath";
 
 const quickLinks = [
   { label: "Über Ernst Maschinenbau", href: "/unternehmen" },
@@ -29,7 +30,7 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ gridColumn: "span 1" }}>
             <Link href="/" style={{ display: "inline-block", textDecoration: "none", marginBottom: 20, background: "#fff", borderRadius: 8, padding: "6px 10px" }}>
-              <Image src="/EMB_logo.png" alt="Ernst Maschinenbau GmbH" width={120} height={40} style={{ objectFit: "contain", display: "block", height: 36, width: "auto" }} />
+              <Image src={asset("/EMB_logo.png")} alt="Ernst Maschinenbau GmbH" width={120} height={40} style={{ objectFit: "contain", display: "block", height: 36, width: "auto" }} />
             </Link>
             <p style={{ fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.45)", marginBottom: 24, maxWidth: 240 }}>
               Führend in industrieller Präzision und Engineering-Exzellenz seit über sechs Jahrzehnten. Ihr verlässlicher Partner im globalen Maschinenbau.

@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { asset } from "@/lib/assetPath";
 
 const navItems = [
   { label: "Home",            href: "/" },
@@ -40,7 +41,7 @@ export default function Navbar() {
 
         {/* ── Logo ── */}
         <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-          <Image src="/EMB_logo.png" alt="Ernst Maschinenbau GmbH" width={120} height={48} style={{ objectFit: "contain", height: 40, width: "auto" }} priority />
+          <Image src={asset("/EMB_logo.png")} alt="Ernst Maschinenbau GmbH" width={120} height={48} style={{ objectFit: "contain", height: 40, width: "auto" }} priority />
         </Link>
 
         {/* ── Desktop nav ── */}

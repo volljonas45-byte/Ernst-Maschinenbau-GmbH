@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import RelatedLinks from "@/components/RelatedLinks";
+import { asset } from "@/lib/assetPath";
 
 const branchen = [
   {
@@ -92,10 +93,10 @@ export default function ProduktbeispielePage() {
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }} className="two-col-stack">
             <div className="reveal" style={{ borderRadius: 16, overflow: "hidden", aspectRatio: "4/3", position: "relative" }}>
-              <Image src="/produktbeispiele-c7c56065.jpg" alt="Produktbeispiele" fill style={{ objectFit: "cover" }} />
+              <Image src={asset("/produktbeispiele-c7c56065.jpg")} alt="Produktbeispiele" fill style={{ objectFit: "cover" }} />
             </div>
             <div className="reveal delay-100" style={{ borderRadius: 16, overflow: "hidden", aspectRatio: "4/3", position: "relative" }}>
-              <Image src="/produktbeispiele2-798a9da0.webp" alt="Produktbeispiele 2" fill style={{ objectFit: "cover" }} />
+              <Image src={asset("/produktbeispiele2-798a9da0.webp")} alt="Produktbeispiele 2" fill style={{ objectFit: "cover" }} />
             </div>
           </div>
         </div>

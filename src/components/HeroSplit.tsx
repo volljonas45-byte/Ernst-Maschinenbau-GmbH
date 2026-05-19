@@ -1,3 +1,5 @@
+﻿import { asset } from "@/lib/assetPath";
+
 interface HeroSplitProps {
   imageSrc?: string;
   title: string;
@@ -16,7 +18,7 @@ export default function HeroSplit({
       {/* Left: Photo (70%) */}
       <div className="w-[70%] relative bg-gray-300 overflow-hidden">
         {imageSrc ? (
-          <img src={imageSrc} alt={title} className="w-full h-full object-cover" />
+          <img src={asset(imageSrc)} alt={title} className="w-full h-full object-cover" />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
             <svg className="w-24 h-24 text-gray-500 opacity-40" fill="currentColor" viewBox="0 0 24 24">

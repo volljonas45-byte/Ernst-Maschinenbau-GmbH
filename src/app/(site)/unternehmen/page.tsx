@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import RelatedLinks from "@/components/RelatedLinks";
+import { asset } from "@/lib/assetPath";
 
 const historieSteps = [
   {
@@ -105,17 +106,17 @@ export default function UnternehmenPage() {
             </div>
             <div className="reveal-right" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
               <div style={{ gridColumn: "1 / -1", borderRadius: 16, overflow: "hidden", aspectRatio: "16/9", position: "relative" }}>
-                <Image src="/besprechung_1.jpg" alt="Geschäftsführung Ernst Maschinenbau" fill style={{ objectFit: "cover" }} />
+                <Image src={asset("/besprechung_1.jpg")} alt="Geschäftsführung Ernst Maschinenbau" fill style={{ objectFit: "cover" }} />
               </div>
               <div style={{ borderRadius: 12, overflow: "hidden", aspectRatio: "3/4", position: "relative" }}>
-                <Image src="/armin_ernst.jpg" alt="Armin Ernst" fill style={{ objectFit: "cover" }} />
+                <Image src={asset("/armin_ernst.jpg")} alt="Armin Ernst" fill style={{ objectFit: "cover" }} />
                 <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(transparent, rgba(0,0,0,0.7)", padding: "24px 14px 12px" }}>
                   <p style={{ fontSize: 12, fontWeight: 700, color: "#fff", margin: 0 }}>Armin Ernst</p>
                   <p style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", margin: 0 }}>Geschäftsführer</p>
                 </div>
               </div>
               <div style={{ borderRadius: 12, overflow: "hidden", aspectRatio: "3/4", position: "relative" }}>
-                <Image src="/martin_ernst.jpg" alt="Martin Ernst" fill style={{ objectFit: "cover" }} />
+                <Image src={asset("/martin_ernst.jpg")} alt="Martin Ernst" fill style={{ objectFit: "cover" }} />
                 <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(transparent, rgba(0,0,0,0.7)", padding: "24px 14px 12px" }}>
                   <p style={{ fontSize: 12, fontWeight: 700, color: "#fff", margin: 0 }}>Martin Ernst</p>
                   <p style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", margin: 0 }}>Geschäftsführer</p>
@@ -168,7 +169,7 @@ export default function UnternehmenPage() {
                     }}>
                       {step.img && (
                         <div style={{ position: "relative", height: 220, overflow: "hidden" }}>
-                          <Image src={step.img} alt={step.title} fill sizes="(max-width: 768px) 100vw, 860px" style={{ objectFit: "cover", objectPosition: "center" }} quality={90} />
+                          <Image src={asset(step.img)} alt={step.title} fill sizes="(max-width: 768px) 100vw, 860px" style={{ objectFit: "cover", objectPosition: "center" }} quality={90} />
                           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%)" }} />
                         </div>
                       )}
@@ -210,7 +211,7 @@ export default function UnternehmenPage() {
                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"}
                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.transform = "translateY(0)"}
               >
-                <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover" }} />
+                <Image src={asset(card.img)} alt={card.title} fill style={{ objectFit: "cover" }} />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(transparent 30%, rgba(12,26,48,0.8))" }} />
                 <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: 24 }}>
                   <h3 style={{ fontSize: 20, fontWeight: 800, color: "#fff", marginBottom: 6, letterSpacing: "-0.02em" }}>{card.title}</h3>
