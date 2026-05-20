@@ -1,4 +1,13 @@
-﻿import Link from "next/link";
+﻿"use client";
+
+import Link from "@/components/LocalizedLink";
+import { usePathname } from "next/navigation";
+import { locales, defaultLocale, type Locale } from "@/lib/i18n/config";
+
+function currentLocale(pathname: string): Locale {
+  const first = pathname.split("/").filter(Boolean)[0];
+  return (locales as readonly string[]).includes(first) ? (first as Locale) : defaultLocale;
+}
 
 interface RelatedItem {
   title: string;
@@ -44,7 +53,15 @@ const icons: Record<RelatedItem["icon"], React.ReactNode> = {
   ),
 };
 
+const labels = {
+  de: { eyebrow: "Weiterführende Informationen", headline: "Das könnte Sie auch interessieren", cta: "Mehr erfahren" },
+  en: { eyebrow: "Further information", headline: "You may also be interested in", cta: "Learn more" },
+} as const;
+
 export default function RelatedLinks({ items }: RelatedLinksProps) {
+  const pathname = usePathname();
+  const lang = currentLocale(pathname);
+  const t = labels[lang];
   return (
     <section style={{ background: "#0c1a30", backgroundImage: "none", isolation: "isolate", padding: "72px 0" }}>
       <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)" }}>
@@ -57,14 +74,14 @@ export default function RelatedLinks({ items }: RelatedLinksProps) {
             display: "inline-block", width: 6, height: 6, borderRadius: "50%",
             background: "#2a8d4a", boxShadow: "0 0 0 3px rgba(42,141,74,0.25)",
           }} />
-          Weiterführende Informationen
+          {t.eyebrow}
         </p>
         <h2 style={{
           fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
           fontWeight: 800, letterSpacing: "-0.03em",
           color: "#fff", marginBottom: 40,
         }}>
-          Das könnte Sie auch interessieren
+          {t.headline}
         </h2>
 
         <div style={{
@@ -124,7 +141,7 @@ export default function RelatedLinks({ items }: RelatedLinksProps) {
                 display: "flex", alignItems: "center", gap: 6,
                 fontSize: 13, fontWeight: 600, color: "#1c6e34",
               }}>
-                Mehr erfahren
+                {t.cta}
                 <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                   <path d="M9 5l7 7-7 7"/>
                 </svg>

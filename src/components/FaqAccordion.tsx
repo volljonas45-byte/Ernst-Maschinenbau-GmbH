@@ -1,36 +1,15 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
-const faqs = [
-  {
-    q: "Was macht die Ernst Maschinenbau GmbH?",
-    a: "Wir entwickeln und fertigen Sondermaschinen, Präzisionsteile und komplette Maschinensysteme für internationale Industriekunden. Als Familienunternehmen seit 1965 verbinden wir langjährige Erfahrung mit modernster Fertigungstechnologie.",
-  },
-  {
-    q: "Für welche Branchen fertigt Ernst Maschinenbau?",
-    a: "Wir bedienen eine breite Palette von Branchen: Automobilindustrie, Pharmaindustrie, Chemieindustrie, Verpackungstechnik, Holzbearbeitung, Kunststoffindustrie, Metallverarbeitung und Automatisierungstechnik.",
-  },
-  {
-    q: "Ist Ernst Maschinenbau auch international tätig?",
-    a: "Ja. Wir produzieren und liefern für Kunden auf der ganzen Welt. Unsere Maschinen und Produkte werden in über 50 Ländern eingesetzt – ein Ergebnis jahrzehntelanger internationaler Projekterfahrung.",
-  },
-  {
-    q: "Was sind die Steffes Dichtigkeitsprüfanlagen?",
-    a: "Im Februar 2020 hat die Ernst Maschinenbau GmbH alle Rechte an der Produktion, dem Vertrieb und dem Service für das gesamte Lieferprogramm der STEFFES Dichtigkeitsprüfanlagen übernommen. Diese Prüfgeräte werden in der Pharma-, Automobil- und Chemieindustrie eingesetzt.",
-  },
-  {
-    q: "Wie kann ich Kontakt aufnehmen oder ein Angebot anfragen?",
-    a: "Nutzen Sie unser Kontaktformular oder erreichen Sie uns direkt per Telefon unter +49 (0)7263 / 9199-0 oder per E-Mail an info@ernstmaschinen.de. Wir melden uns zeitnah bei Ihnen.",
-  },
-];
+export type FaqItem = { q: string; a: string };
 
-export default function FaqAccordion() {
+export default function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-      {faqs.map((faq, i) => {
+      {items.map((faq, i) => {
         const isOpen = openIndex === i;
         return (
           <div
@@ -75,7 +54,7 @@ export default function FaqAccordion() {
             </button>
 
             <div style={{
-              maxHeight: isOpen ? 300 : 0,
+              maxHeight: isOpen ? 320 : 0,
               overflow: "hidden",
               transition: "max-height 0.35s cubic-bezier(0.22,1,0.36,1)",
             }}>

@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { usePathname } from "next/navigation";
+import { locales } from "@/lib/i18n/config";
 
 interface SidebarItem {
   label: string;
@@ -19,8 +20,17 @@ const GearIcon = () => (
   </svg>
 );
 
+function stripLocale(pathname: string): string {
+  const parts = pathname.split("/").filter(Boolean);
+  if (parts.length > 0 && (locales as readonly string[]).includes(parts[0])) {
+    return "/" + parts.slice(1).join("/");
+  }
+  return pathname;
+}
+
 export default function SidebarNav({ title, items }: SidebarNavProps) {
   const pathname = usePathname();
+  const localePath = stripLocale(pathname);
 
   return (
     <aside className="w-full md:w-56 shrink-0">
@@ -28,7 +38,7 @@ export default function SidebarNav({ title, items }: SidebarNavProps) {
       <div className="border-b border-gray-300 mb-3" />
       <ul className="space-y-1">
         {items.map((item) => {
-          const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+          const isActive = localePath === item.href || localePath.startsWith(item.href + "/");
           return (
             <li key={item.href}>
               <Link

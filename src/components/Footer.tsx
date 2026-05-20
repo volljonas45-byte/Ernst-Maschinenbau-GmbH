@@ -1,25 +1,27 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { asset } from "@/lib/assetPath";
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/getDictionary";
 
-const quickLinks = [
-  { label: "Über Ernst Maschinenbau", href: "/unternehmen" },
-  { label: "Unsere Produkte",         href: "/produkte" },
-  { label: "Engineering-Leistungen",  href: "/leistungen" },
-  { label: "Produktbeispiele",        href: "/unternehmen/produktbeispiele" },
-  { label: "Stellenangebote",         href: "/stellenangebote" },
-];
+export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+  const quickLinks = [
+    { label: dict.footer.quickLinks.about,    href: `/${lang}/unternehmen` },
+    { label: dict.footer.quickLinks.products, href: `/${lang}/produkte` },
+    { label: dict.footer.quickLinks.services, href: `/${lang}/leistungen` },
+    { label: dict.footer.quickLinks.examples, href: `/${lang}/unternehmen/produktbeispiele` },
+    { label: dict.footer.quickLinks.jobs,     href: `/${lang}/stellenangebote` },
+  ];
 
-const leistungLinks = [
-  { label: "Sondermaschinenbau",   href: "/leistungen/entwicklung-sondermaschinen" },
-  { label: "Präzisionsfertigung",  href: "/leistungen/praezisionsfertigung" },
-  { label: "Lohnfertigung",        href: "/leistungen/lohnarbeit" },
-  { label: "Service & Wartung",    href: "/leistungen/service" },
-];
+  const leistungLinks = [
+    { label: dict.footer.servicesLinks.sondermaschinen, href: `/${lang}/leistungen/entwicklung-sondermaschinen` },
+    { label: dict.footer.servicesLinks.praezision,      href: `/${lang}/leistungen/praezisionsfertigung` },
+    { label: dict.footer.servicesLinks.lohnarbeit,      href: `/${lang}/leistungen/lohnarbeit` },
+    { label: dict.footer.servicesLinks.service,         href: `/${lang}/leistungen/service` },
+  ];
 
-export default function Footer() {
   return (
     <footer style={{ background: "#0c1a30", color: "#fff", backgroundImage: "none", isolation: "isolate", overflow: "hidden", position: "relative", zIndex: 0 }}>
 
@@ -29,11 +31,11 @@ export default function Footer() {
 
           {/* Brand */}
           <div style={{ gridColumn: "span 1" }}>
-            <Link href="/" style={{ display: "inline-block", textDecoration: "none", marginBottom: 20, background: "#fff", borderRadius: 8, padding: "6px 10px" }}>
+            <Link href={`/${lang}`} style={{ display: "inline-block", textDecoration: "none", marginBottom: 20, background: "#fff", borderRadius: 8, padding: "6px 10px" }}>
               <Image src={asset("/EMB_logo.png")} alt="Ernst Maschinenbau GmbH" width={120} height={40} style={{ objectFit: "contain", display: "block", height: 36, width: "auto" }} />
             </Link>
             <p style={{ fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.45)", marginBottom: 24, maxWidth: 240 }}>
-              Führend in industrieller Präzision und Engineering-Exzellenz seit über sechs Jahrzehnten. Ihr verlässlicher Partner im globalen Maschinenbau.
+              {dict.footer.tagline}
             </p>
             {/* Social icons */}
             <div style={{ display: "flex", gap: 8 }}>
@@ -56,7 +58,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 18 }}>Quick Links</p>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 18 }}>{dict.footer.quickLinksTitle}</p>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
               {quickLinks.map((l) => (
                 <li key={l.href}>
@@ -72,7 +74,7 @@ export default function Footer() {
 
           {/* Leistungen */}
           <div>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 18 }}>Leistungen</p>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 18 }}>{dict.footer.servicesTitle}</p>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
               {leistungLinks.map((l) => (
                 <li key={l.href}>
@@ -88,7 +90,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 18 }}>Kontakt</p>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 18 }}>{dict.footer.contactTitle}</p>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 14 }}>
               <li style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
                 <svg style={{ flexShrink: 0, marginTop: 1 }} width="15" height="15" fill="none" stroke="#1c6e34" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -119,12 +121,12 @@ export default function Footer() {
             </ul>
 
             {/* CTA */}
-            <Link href="/kontakt"
+            <Link href={`/${lang}/kontakt`}
               style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 24, fontSize: 13, fontWeight: 600, color: "#fff", background: "#1c6e34", borderRadius: 999, padding: "9px 18px", textDecoration: "none", transition: "background 0.2s" }}
               onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.background = "#155228"}
               onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.background = "#1c6e34"}
             >
-              Kontakt aufnehmen
+              {dict.nav.contactCta}
               <svg width="12" height="12" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </Link>
           </div>
@@ -136,13 +138,13 @@ export default function Footer() {
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "20px clamp(16px,3vw,48px)", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
           <p style={{ fontSize: 12, color: "rgba(255,255,255,0.25)", fontWeight: 500 }}>
-            © {new Date().getFullYear()} Ernst Maschinenbau GmbH · Alle Rechte vorbehalten
+            © {new Date().getFullYear()} Ernst Maschinenbau GmbH · {dict.footer.rights}
           </p>
           <div style={{ display: "flex", gap: 28 }}>
             {[
-              { label: "Datenschutz", href: "/datenschutz" },
-              { label: "Impressum",   href: "/impressum" },
-              { label: "Kontakt",     href: "/kontakt" },
+              { label: dict.footer.legal.privacy, href: `/${lang}/datenschutz` },
+              { label: dict.footer.legal.imprint, href: `/${lang}/impressum` },
+              { label: dict.footer.legal.contact, href: `/${lang}/kontakt` },
             ].map((l) => (
               <Link key={l.href} href={l.href}
                 style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.25)", textDecoration: "none", transition: "color 0.18s" }}

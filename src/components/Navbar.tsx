@@ -1,23 +1,26 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { asset } from "@/lib/assetPath";
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/getDictionary";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const navItems = [
-  { label: "Home",            href: "/" },
-  { label: "Über uns",        href: "/unternehmen" },
-  { label: "Produkte",        href: "/produkte" },
-  { label: "Leistungen",      href: "/leistungen" },
-  { label: "Stellenangebote", href: "/stellenangebote" },
-];
-
-export default function Navbar() {
+export default function Navbar({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen]         = useState(false);
   const pathname                = usePathname();
+
+  const navItems = [
+    { label: dict.nav.home,    href: `/${lang}` },
+    { label: dict.nav.company, href: `/${lang}/unternehmen` },
+    { label: dict.nav.products,href: `/${lang}/produkte` },
+    { label: dict.nav.services,href: `/${lang}/leistungen` },
+    { label: dict.nav.jobs,    href: `/${lang}/stellenangebote` },
+  ];
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 12);
@@ -40,7 +43,7 @@ export default function Navbar() {
       <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 clamp(16px,3vw,48px)", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
         {/* ── Logo ── */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+        <Link href={`/${lang}`} style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
           <Image src={asset("/EMB_logo.png")} alt="Ernst Maschinenbau GmbH" width={120} height={48} style={{ objectFit: "contain", height: 40, width: "auto" }} priority />
         </Link>
 
@@ -75,6 +78,9 @@ export default function Navbar() {
 
         {/* ── Actions ── */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          {/* Language switcher */}
+          <LanguageSwitcher currentLang={lang} />
+
           <a
             href="tel:+4972639199-0"
             className="hidden lg:flex"
@@ -89,7 +95,7 @@ export default function Navbar() {
           </a>
 
           <Link
-            href="/kontakt"
+            href={`/${lang}/kontakt`}
             className="hidden md:inline-flex"
             style={{
               alignItems: "center", gap: 6,
@@ -108,7 +114,7 @@ export default function Navbar() {
             onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#155228"; (e.currentTarget as HTMLElement).style.transform = "scale(1.03)"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#1c6e34"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
           >
-            Kontakt
+            {dict.nav.contact}
             <svg width="14" height="14" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
               <path d="M14 5l7 7m0 0l-7 7m7-7H3"/>
             </svg>
@@ -117,7 +123,7 @@ export default function Navbar() {
           {/* Mobile burger – only visible below lg (1024px) */}
           <button
             onClick={() => setOpen(!open)}
-            aria-label="Menü"
+            aria-label={dict.nav.menu}
             style={{
               width: 36, height: 36, borderRadius: 8,
               background: open ? "rgba(0,0,0,0.06)" : "transparent",
@@ -137,7 +143,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div style={{
         overflow: "hidden",
-        maxHeight: open ? "380px" : "0",
+        maxHeight: open ? "440px" : "0",
         transition: "max-height 0.35s cubic-bezier(0.22,1,0.36,1)",
         borderTop: open ? "1px solid rgba(0,0,0,0.06)" : "none",
         background: "rgba(255,255,255,0.97)",
@@ -165,7 +171,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/kontakt"
+            href={`/${lang}/kontakt`}
             style={{
               display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
               marginTop: 8, padding: "13px",
@@ -174,7 +180,7 @@ export default function Navbar() {
               textDecoration: "none", letterSpacing: "-0.01em",
             }}
           >
-            Kontakt aufnehmen
+            {dict.nav.contactCta}
             <svg width="14" height="14" fill="none" stroke="white" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
               <path d="M9 5l7 7-7 7"/>
             </svg>

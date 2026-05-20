@@ -11,6 +11,8 @@ interface PageHeroProps {
   imageSrc?: string;
   breadcrumbs?: Crumb[];
   height?: number;
+  homeHref?: string;
+  homeLabel?: string;
 }
 
 export default function PageHero({
@@ -20,6 +22,8 @@ export default function PageHero({
   imageSrc,
   breadcrumbs = [],
   height = 380,
+  homeHref = "/",
+  homeLabel = "Home",
 }: PageHeroProps) {
   return (
     <section
@@ -71,10 +75,10 @@ export default function PageHero({
         {/* Breadcrumbs */}
         {breadcrumbs.length > 0 && (
           <nav style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 16, flexWrap: "wrap" }}>
-            <Link href="/" style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", textDecoration: "none", transition: "color 0.2s" }}
+            <Link href={homeHref} style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", textDecoration: "none", transition: "color 0.2s" }}
               onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.8)"}
               onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.45)"}
-            >Home</Link>
+            >{homeLabel}</Link>
             {breadcrumbs.map((crumb, i) => (
               <span key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
                 <span style={{ fontSize: 10, color: "rgba(255,255,255,0.3)" }}>›</span>

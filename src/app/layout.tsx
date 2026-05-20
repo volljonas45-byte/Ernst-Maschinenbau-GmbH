@@ -5,8 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ernst Maschinenbau GmbH – Kompetenz aus Neidenstein",
-  description: "Entwicklung von Sondermaschinen, Präzisionsfertigung und Lohnarbeit. Familienunternehmen seit 1965 in Neidenstein.",
+  title: "Ernst Maschinenbau GmbH",
+  description:
+    "Entwicklung von Sondermaschinen, Präzisionsfertigung und Lohnarbeit. Familienunternehmen seit 1965 in Neidenstein.",
 };
 
 export default function RootLayout({
