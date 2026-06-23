@@ -140,14 +140,14 @@ export default function ElektrotechnikerPage({ params }: { params: Promise<{ lan
             <div className="reveal-left" style={{ background: "#fff", borderRadius: 18, padding: "32px", border: "1px solid rgba(0,0,0,0.06)", boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(28,110,52,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg width="22" height="22" fill="none" stroke="#1c6e34" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  <svg width="22" height="22" fill="none" stroke="#1c6e34" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/><path d="M9 14l2 2 4-4"/></svg>
                 </div>
                 <h2 style={{ fontSize: 18, fontWeight: 800, color: "#1d1d1f", letterSpacing: "-0.02em" }}>{c.aufgabenTitle}</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {c.aufgaben.map((a, i) => (
                   <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span style={{ flexShrink: 0, marginTop: 1, width: 18, height: 18, borderRadius: "50%", background: "#e9f1ec", display: "flex", alignItems: "center", justifyContent: "center" }}><svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                     <p style={{ fontSize: 14, color: "#424245", lineHeight: 1.55 }}>{a}</p>
                   </div>
                 ))}
@@ -156,14 +156,14 @@ export default function ElektrotechnikerPage({ params }: { params: Promise<{ lan
             <div className="reveal-right" style={{ background: "#fff", borderRadius: 18, padding: "32px", border: "1px solid rgba(0,0,0,0.06)", boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(28,110,52,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg width="22" height="22" fill="none" stroke="#1c6e34" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                  <svg width="22" height="22" fill="none" stroke="#1c6e34" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                 </div>
                 <h2 style={{ fontSize: 18, fontWeight: 800, color: "#1d1d1f", letterSpacing: "-0.02em" }}>{c.anforderungenTitle}</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {c.anforderungen.map((a, i) => (
                   <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span style={{ flexShrink: 0, marginTop: 1, width: 18, height: 18, borderRadius: "50%", background: "#e9f1ec", display: "flex", alignItems: "center", justifyContent: "center" }}><svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="#1c6e34" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                     <p style={{ fontSize: 14, color: "#424245", lineHeight: 1.55 }}>{a}</p>
                   </div>
                 ))}
@@ -174,14 +174,14 @@ export default function ElektrotechnikerPage({ params }: { params: Promise<{ lan
           <div className="reveal" style={{ background: "#0c1a30", borderRadius: 18, padding: "32px", marginTop: 24 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
               <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(42,141,74,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <svg width="22" height="22" fill="none" stroke="#2a8d4a" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="22" height="22" fill="none" stroke="#2a8d4a" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>
               </div>
               <h2 style={{ fontSize: 18, fontWeight: 800, color: "#fff", letterSpacing: "-0.02em" }}>{c.benefitsTitle}</h2>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 12 }}>
               {c.benefits.map((b, i) => (
                 <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                  <svg style={{ flexShrink: 0, marginTop: 3 }} width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#2a8d4a" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span style={{ flexShrink: 0, marginTop: 1, width: 18, height: 18, borderRadius: "50%", background: "rgba(42,141,74,0.18)", display: "flex", alignItems: "center", justifyContent: "center" }}><svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="#5fce82" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <p style={{ fontSize: 14, color: "rgba(255,255,255,0.75)", lineHeight: 1.55 }}>{b}</p>
                 </div>
               ))}

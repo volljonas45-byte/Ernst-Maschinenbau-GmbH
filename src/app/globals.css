@@ -15,6 +15,140 @@
 @media (max-width: 900px) { .related-grid { grid-template-columns: repeat(2, 1fr) !important; } }
 @media (max-width: 560px) { .related-grid { grid-template-columns: 1fr !important; } }
 
+/* ── RelatedLinks card (modern) ──────────────────────────────── */
+.related-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(165deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025));
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 20px;
+  padding: 30px 28px 26px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform .4s cubic-bezier(.22,1,.36,1), border-color .35s, background .35s, box-shadow .35s;
+}
+.related-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(130% 90% at 50% -25%, rgba(42,141,74,0.20), transparent 60%);
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+}
+.related-card > * { position: relative; z-index: 1; }
+.related-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(42,141,74,0.45);
+  background: linear-gradient(165deg, rgba(42,141,74,0.11), rgba(255,255,255,0.03));
+  box-shadow: 0 22px 55px -16px rgba(0,0,0,0.6);
+}
+.related-card:hover::before { opacity: 1; }
+
+.related-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #34a85b, #1c6e34);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 22px -8px rgba(28,110,52,0.7), inset 0 1px 0 rgba(255,255,255,0.3);
+  transition: transform .4s cubic-bezier(.22,1,.36,1);
+}
+.related-card:hover .related-card-icon { transform: scale(1.08) rotate(-4deg); }
+
+.related-card-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.related-card-desc {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 22px;
+  flex: 1;
+}
+.related-card-cta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5fce82;
+}
+.related-card-arrow { transition: transform .3s cubic-bezier(.22,1,.36,1); }
+.related-card:hover .related-card-arrow { transform: translateX(5px); }
+
+/* ── Navbar links + active indicator ─────────────────────────── */
+.nav-link {
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #1d1d1f;
+  text-decoration: none;
+  transition: color .2s ease;
+  font-family: -apple-system, "SF Pro Text", sans-serif;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: #1c6e34;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .3s cubic-bezier(.22,1,.36,1);
+}
+.nav-link:hover { color: #1c6e34; }
+.nav-link:hover::after { transform: scaleX(0.5); }
+.nav-link.active { color: #1c6e34; font-weight: 600; }
+.nav-link.active::after { transform: scaleX(1); }
+
+.nav-link-mobile {
+  position: relative;
+  display: block;
+  padding: 12px 14px 12px 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1d1d1f;
+  text-decoration: none;
+  margin-bottom: 2px;
+  letter-spacing: -0.01em;
+  transition: background .2s ease, color .2s ease;
+}
+.nav-link-mobile.active {
+  color: #1c6e34;
+  font-weight: 600;
+  background: rgba(28,110,52,0.08);
+}
+.nav-link-mobile.active::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 18px;
+  border-radius: 3px;
+  background: #1c6e34;
+}
+
 /* ── Produkt card image hover zoom ───────────────────────────── */
 .produkt-card-img { min-height: 200px; }
 a:hover .produkt-card-img img { transform: scale(1.05) !important; }
@@ -66,7 +200,6 @@ a:hover .produkt-card-img img { transform: scale(1.05) !important; }
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
 
 body {
   font-family: -apple-system, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;

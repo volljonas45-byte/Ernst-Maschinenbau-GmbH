@@ -22,6 +22,10 @@ export default function Navbar({ lang, dict }: { lang: Locale; dict: Dictionary 
     { label: dict.nav.jobs,    href: `/${lang}/stellenangebote` },
   ];
 
+  const homeHref = `/${lang}`;
+  const isActive = (href: string) =>
+    href === homeHref ? pathname === href : pathname === href || pathname.startsWith(href + "/");
+
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", fn, { passive: true });
@@ -49,31 +53,15 @@ export default function Navbar({ lang, dict }: { lang: Locale; dict: Dictionary 
 
         {/* ── Desktop nav ── */}
         <nav style={{ display: "flex", alignItems: "center", gap: 4 }} className="hidden lg:flex">
-          {navItems.map((item) => {
-            const active = pathname === item.href;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                style={{
-                  padding: "8px 16px",
-                  borderRadius: 8,
-                  fontSize: 15,
-                  fontWeight: 500,
-                  letterSpacing: "-0.01em",
-                  color: active ? "#1c6e34" : "#1d1d1f",
-                  textDecoration: "none",
-                  transition: "all 0.18s",
-                  background: active ? "rgba(28,110,52,0.08)" : "transparent",
-                  fontFamily: "-apple-system, 'SF Pro Text', sans-serif",
-                }}
-                onMouseEnter={(e) => { if (!active) (e.currentTarget as HTMLElement).style.background = "rgba(0,0,0,0.05)"; }}
-                onMouseLeave={(e) => { if (!active) (e.currentTarget as HTMLElement).style.background = "transparent"; }}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`nav-link${isActive(item.href) ? " active" : ""}`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         {/* ── Actions ── */}
@@ -154,18 +142,7 @@ export default function Navbar({ lang, dict }: { lang: Locale; dict: Dictionary 
             <Link
               key={item.href}
               href={item.href}
-              style={{
-                display: "block",
-                padding: "12px 14px",
-                borderRadius: 12,
-                fontSize: 15,
-                fontWeight: 500,
-                color: pathname === item.href ? "#1c6e34" : "#1d1d1f",
-                textDecoration: "none",
-                background: pathname === item.href ? "rgba(28,110,52,0.08)" : "transparent",
-                marginBottom: 2,
-                letterSpacing: "-0.01em",
-              }}
+              className={`nav-link-mobile${isActive(item.href) ? " active" : ""}`}
             >
               {item.label}
             </Link>

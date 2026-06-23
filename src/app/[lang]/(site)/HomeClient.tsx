@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import FaqAccordion from "@/components/FaqAccordion";
+import Timeline from "@/components/Timeline";
 import { asset } from "@/lib/assetPath";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/getDictionary";
@@ -156,39 +157,40 @@ export default function HomeClient({ lang, dict }: { lang: Locale; dict: Diction
             <HeroCarousel />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(105deg,rgba(6,14,26,0.90) 0%,rgba(6,14,26,0.65) 45%,rgba(6,14,26,0.22) 100%)", zIndex: 3, pointerEvents: "none" }} />
 
-            <div style={{ position: "absolute", top: "clamp(40px,7vw,88px)", left: "clamp(28px,5vw,64px)", maxWidth: "clamp(300px,48%,620px)", zIndex: 10 }}>
-              <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#2a8d4a", marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
-                <span className="pulse-dot" style={{ width: 7, height: 7, borderRadius: "50%", background: "#2a8d4a", display: "inline-block" }} />
-                {h.hero.eyebrow}
-              </p>
-              <h1 className="reveal delay-100" style={{ fontSize: "clamp(2rem,4.6vw,4.4rem)", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.08, color: "#fff" }}>
-                {h.hero.titleLine1}<br/>
-                <span style={{ color: "#2a8d4a" }}>{h.hero.titleLine2A}</span>{h.hero.titleLine2B}
-              </h1>
-              <p className="reveal delay-200" style={{ marginTop: "clamp(14px,2vw,24px)", fontSize: "clamp(14px,1.4vw,16px)", lineHeight: 1.75, color: "rgba(255,255,255,0.58)", maxWidth: 420 }}>
-                {h.hero.subtitleLine1}<br/>{h.hero.subtitleLine2}
-              </p>
-              <div className="reveal delay-300" style={{ marginTop: "clamp(24px,3vw,40px)", display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <Link href={`/${lang}/leistungen`} className="btn-pill btn-green" style={{ fontSize: "clamp(13px,1.2vw,15px)" }}>{h.hero.ctaServices} <IconArrow color="#fff" /></Link>
-                <Link href={`/${lang}/kontakt`} className="btn-pill" style={{ fontSize: "clamp(13px,1.2vw,15px)", background: "rgba(255,255,255,0.10)", color: "#fff", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.18)" }}>{h.hero.ctaContact}</Link>
+            <div style={{ position: "absolute", inset: 0, zIndex: 10, display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "clamp(20px,3vw,40px)", padding: "clamp(40px,7vw,88px) clamp(16px,3vw,36px) clamp(20px,3vw,40px)" }}>
+              <div style={{ maxWidth: "clamp(300px,48%,620px)", marginLeft: "clamp(12px,2vw,28px)" }}>
+                <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#2a8d4a", marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
+                  <span className="pulse-dot" style={{ width: 7, height: 7, borderRadius: "50%", background: "#2a8d4a", display: "inline-block" }} />
+                  {h.hero.eyebrow}
+                </p>
+                <h1 className="reveal delay-100" style={{ fontSize: "clamp(2rem,4.6vw,4.4rem)", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.08, color: "#fff" }}>
+                  {h.hero.titleLine1}<br/>
+                  <span style={{ color: "#2a8d4a" }}>{h.hero.titleLine2A}</span>{h.hero.titleLine2B}
+                </h1>
+                <p className="reveal delay-200" style={{ marginTop: "clamp(14px,2vw,24px)", fontSize: "clamp(14px,1.4vw,16px)", lineHeight: 1.75, color: "rgba(255,255,255,0.58)", maxWidth: 420 }}>
+                  {h.hero.subtitleLine1}<br/>{h.hero.subtitleLine2}
+                </p>
+                <div className="reveal delay-300" style={{ marginTop: "clamp(24px,3vw,40px)", display: "flex", gap: 10, flexWrap: "wrap" }}>
+                  <Link href={`/${lang}/leistungen`} className="btn-pill btn-green" style={{ fontSize: "clamp(13px,1.2vw,15px)" }}>{h.hero.ctaServices} <IconArrow color="#fff" /></Link>
+                  <Link href={`/${lang}/kontakt`} className="btn-pill" style={{ fontSize: "clamp(13px,1.2vw,15px)", background: "rgba(255,255,255,0.10)", color: "#fff", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.18)" }}>{h.hero.ctaContact}</Link>
+                </div>
               </div>
-            </div>
 
-            <div ref={statsRef} className="reveal delay-400"
-              style={{ position: "absolute", bottom: "clamp(20px,3vw,40px)", left: "clamp(16px,3vw,36px)", right: "clamp(16px,3vw,36px)", zIndex: 10 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", background: "rgba(255,255,255,0.10)", backdropFilter: "blur(20px) saturate(160%)", WebkitBackdropFilter: "blur(20px) saturate(160%)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 20, overflow: "hidden" }}>
-                {h.hero.stats.map((st, i) => (
-                  <div key={st.l} style={{ display: "flex", alignItems: "center" }}>
-                    <div style={{ flex: 1, textAlign: "center", padding: "clamp(16px,2vw,24px) clamp(8px,1.5vw,16px)" }}>
-                      <div style={{ fontSize: "clamp(1.6rem,3.2vw,2.8rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1 }}>
-                        <StatCounter value={st.v} suffix={st.s} trigger={statsOn} />
+              <div ref={statsRef} className="reveal delay-400">
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", background: "rgba(255,255,255,0.10)", backdropFilter: "blur(20px) saturate(160%)", WebkitBackdropFilter: "blur(20px) saturate(160%)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 20, overflow: "hidden" }}>
+                  {h.hero.stats.map((st, i) => (
+                    <div key={st.l} style={{ display: "flex", alignItems: "center" }}>
+                      <div style={{ flex: 1, textAlign: "center", padding: "clamp(16px,2vw,24px) clamp(8px,1.5vw,16px)" }}>
+                        <div style={{ fontSize: "clamp(1.6rem,3.2vw,2.8rem)", fontWeight: 800, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1 }}>
+                          <StatCounter value={st.v} suffix={st.s} trigger={statsOn} />
+                        </div>
+                        <div style={{ marginTop: 6, fontSize: "clamp(12px,1.1vw,14px)", fontWeight: 600, color: "rgba(255,255,255,0.9)" }}>{st.l}</div>
+                        <div style={{ marginTop: 2, fontSize: "clamp(10px,0.9vw,11px)", color: "rgba(255,255,255,0.45)" }}>{st.sub}</div>
                       </div>
-                      <div style={{ marginTop: 6, fontSize: "clamp(12px,1.1vw,14px)", fontWeight: 600, color: "rgba(255,255,255,0.9)" }}>{st.l}</div>
-                      <div style={{ marginTop: 2, fontSize: "clamp(10px,0.9vw,11px)", color: "rgba(255,255,255,0.45)" }}>{st.sub}</div>
+                      {i < 2 && <div style={{ width: 1, height: 44, background: "rgba(255,255,255,0.15)", flexShrink: 0 }} />}
                     </div>
-                    {i < 2 && <div style={{ width: 1, height: 44, background: "rgba(255,255,255,0.15)", flexShrink: 0 }} />}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -394,30 +396,7 @@ export default function HomeClient({ lang, dict }: { lang: Locale; dict: Diction
             <p className="caption" style={{ marginBottom: 12 }}>{h.timeline.caption}</p>
             <h2 className="headline-md" style={{ color: "var(--text)" }}>{h.timeline.headline}</h2>
           </div>
-          <div className="reveal" style={{ overflowX: "auto", paddingBottom: 4 }} >
-            <div style={{ display: "flex", gap: 0, minWidth: 600, position: "relative" }}>
-              <div style={{ position: "absolute", top: 18, left: 28, right: 28, height: 1, background: "rgba(0,0,0,0.1)", zIndex: 0 }} />
-              {h.timeline.items.map((t, i) => {
-                const isLast = i === h.timeline.items.length - 1;
-                return (
-                  <div key={t.year} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", position: "relative", zIndex: 1 }}>
-                    <div style={{
-                      width: 36, height: 36, borderRadius: "50%",
-                      background: isLast ? "#1c6e34" : "#fff",
-                      border: `2px solid ${isLast ? "#1c6e34" : "rgba(0,0,0,0.12)"}`,
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      boxShadow: isLast ? "0 0 0 5px rgba(28,110,52,0.15)" : "0 1px 6px rgba(0,0,0,0.08)",
-                      marginBottom: 14, flexShrink: 0,
-                    }}>
-                      <div style={{ width: 8, height: 8, borderRadius: "50%", background: isLast ? "#fff" : "#1c6e34" }} />
-                    </div>
-                    <p style={{ fontSize: 14, fontWeight: 800, color: isLast ? "#1c6e34" : "#1d1d1f", marginBottom: 5, letterSpacing: "-0.02em" }}>{t.year}</p>
-                    <p style={{ fontSize: 12, color: "#6e6e73", lineHeight: 1.55, maxWidth: 140, padding: "0 8px" }}>{t.event}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+          <Timeline items={h.timeline.items} />
         </div>
       </section>
 
